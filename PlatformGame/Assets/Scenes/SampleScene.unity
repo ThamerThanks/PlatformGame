@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b12ee028fd37e64fae37e1c32761d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 400
+  m_JumpForce: 300
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 0
@@ -378,8 +378,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f1cc2e5bf208544a45c7079b5bd488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 519420032}
-  player: {fileID: 323725527}
+  cameraPos: {fileID: 519420032}
+  playerPos: {fileID: 323725527}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
