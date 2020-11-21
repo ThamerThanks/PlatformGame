@@ -35,12 +35,18 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
+        if (horizontalMove != 0)
+        {
+            FindObjectOfType<AudioManager>().Play("PlayerWalk");
+        }
     }
     void FixedUpdate()
     {
         // Move our character
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false;
+
+
         
     }
 }
