@@ -35,9 +35,14 @@ public class PlayerMovement : MonoBehaviour
         {
             crouch = false;
         }
-        if (horizontalMove != 0)
+        if (horizontalMove != 0 && !FindObjectOfType<AudioManager>().IsPlaying("PlayerWalk"))
         {
             FindObjectOfType<AudioManager>().Play("PlayerWalk");
+            
+        }
+        else if (horizontalMove == 0 && FindObjectOfType<AudioManager>().IsPlaying("PlayerWalk"))
+        {
+            FindObjectOfType<AudioManager>().Stop("PlayerWalk");
         }
     }
     void FixedUpdate()
