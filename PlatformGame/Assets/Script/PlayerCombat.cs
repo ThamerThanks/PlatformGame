@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     public Animator animator;
+    public PlayerMovement pm;
 
     public Transform attackPoint;
     public LayerMask enemyLayer;
@@ -40,6 +41,17 @@ public class PlayerCombat : MonoBehaviour
             Debug.Log("We hit " + enemy.name);
         }
     }
+
+    void pauseMovement()
+    {
+        pm.enabled = false;
+    }
+
+    void resumeMovement()
+    {
+        pm.enabled = true;
+    }
+
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)

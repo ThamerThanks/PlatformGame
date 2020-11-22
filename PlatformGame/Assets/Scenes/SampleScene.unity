@@ -358,12 +358,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 323725532}
+  pm: {fileID: 323725530}
   attackPoint: {fileID: 1423387283}
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
   attackRange: 0.5
   attackDamage: 40
+  attackRate: 2
 --- !u!114 &323725534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1022,7 @@ GameObject:
   - component: {fileID: 1652540697}
   - component: {fileID: 1652540696}
   - component: {fileID: 1652540695}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tilemap_fg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
