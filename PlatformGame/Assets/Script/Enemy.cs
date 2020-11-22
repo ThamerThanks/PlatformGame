@@ -24,7 +24,8 @@ public class Enemy : MonoBehaviour
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
-
+        rb.AddForce(new Vector2(30, 0));
+        
         if(currentHealth <= 0)
         {
             Die();
